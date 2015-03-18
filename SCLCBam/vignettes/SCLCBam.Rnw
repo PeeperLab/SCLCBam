@@ -38,9 +38,13 @@ BiocStyle::latex()
 
 To obtain the full path to the .bam file, use the \Rcode{getPathBamFolder()} function:
 
-<<getPathBamFolder, print=FALSE, eval=TRUE>>=
+<<getPathBamFolder, print=FALSE, eval=TRUE, results=hide>>=
 library(SCLCBam)
 getPathBamFolder()
+@
+<<getPathBamFolder, print=FALSE, eval=TRUE, echo=FALSE>>=
+library(SCLCBam)
+cat(SCLCBam:::.wrap(getPathBamFolder()))
 @
 
 The .bam file is provided as experimental data for the \Biocpkg{CopywriteR}
@@ -50,9 +54,9 @@ detection.
 \section{Reference}
 
 The dataset was downloaded from the European Nucleotide Archive using the
-accession number PRJEB6954 using sample accession number SAMEA2697779, and reads
-on chromosome 4 were extracted. The full .bam file containing data for all
-chromosomes can be downloaded from
+accession number PRJEB6954 using sample accession number SAMEA2697779, and
+off-target reads on chromosome 4 were extracted. The full .bam file containing
+data for all chromosomes can be downloaded from
 \url{http://www.ebi.ac.uk/ena/data/view/SAMEA2697779}.
 
 \end{document}
